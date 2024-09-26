@@ -1,0 +1,171 @@
+/* Start Box */
+.flex {
+  display: flex;
+}
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.flex-1 {
+  flex: 1;
+}
+.f-grow-1 {
+  flex-grow: 1;
+}
+.f-shrink-0 {
+  flex-shrink: 0;
+}
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .d-grid {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+  }
+}
+.d-block {
+  display: block;
+}
+/* End Box */
+/* Start Padding & Margin */
+.p-20 {
+  padding: 20px;
+}
+.p-15 {
+  padding: 15px;
+}
+.p-10 {
+  padding: 10px;
+}
+.p-5 {
+  padding: 5px;
+}
+.p-20-0 {
+  padding: 20px 0;
+}
+.p-5-10 {
+  padding: 5px 10px;
+}
+.p-10-0 {
+  padding: 10px 0;
+}
+.m-10 {
+  margin: 10px;
+}
+.m-0 {
+  margin: 0;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+/* End Padding & Margin */
+/* Start Border & Border Radius & Box Shadow & Position & Transition */
+.border-1 {
+  border: 1px solid #eee;
+}
+.border-2 {
+  border: 1px solid #ddd;
+}
+.border-none {
+  border: none;
+}
+.rad-circle {
+  border-radius: 50%;
+}
+.relative {
+  position: relative;
+}
+/* End Border & Border Radius & Box Shadow & Position & Transition */
+/* Start Colors */
+.bg-white {
+  background-color: white;
+}
+.bg-eee {
+  background-color: #eee;
+}
+.bg-blue {
+  background-color: #0075ff;
+}
+.bg-orange {
+  background-color: #f59e0b;
+}
+.bg-green {
+  background-color: #22c55e;
+}
+.c-white {
+  color: white;
+}
+.c-black {
+  color: black;
+}
+.c-blue {
+  color: #0075ff;
+}
+.c-green {
+  color: #22c55e;
+}
+.c-red {
+  color: #f44336;
+}
+.c-orange {
+  color: #f59e0b;
+}
+.c-grey {
+  color: #888;
+}
+/* End Colors */
+/* Start Sizes */
+.w-full {
+  width: 100%;
+}
+/* End Sizes */
+/* Start Fonts */
+.fs-14 {
+  font-size: 14px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+.fw-bold {
+  font-weight: bold;
+}
+/* End Fonts */
+/* Start Text */
+.txt-c {
+  text-align: center;
+}
+/* End Text */
+/* Start Components */
+.btn-shape {
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+/* End Components */
