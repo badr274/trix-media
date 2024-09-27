@@ -33,13 +33,28 @@ if (windowWidth <= 992) {
 const popups = document.querySelectorAll(".popup");
 const popupsClose = document.querySelectorAll(".popup .popup-close");
 const overlay = document.querySelector(".overlay");
-const rechargePopupDropdown = document.querySelector(
-  ".recharge-balance-popup .nominal .my-drop"
-);
-if (rechargePopupDropdown) {
-  rechargePopupDropdown.addEventListener("click", () =>
-    rechargePopupDropdown.classList.toggle("active")
-  );
+const myDrops = document.querySelectorAll(".my-drop");
+const myDropList = document.querySelector(".my-drop .menu-items");
+if (myDrops) {
+  myDrops.forEach((myDrop) => {
+    const theDrop = document.querySelector(`.${myDrop.classList[1]}`);
+    const theDropSelected = document.querySelector(`.${myDrop.classList[1]}`);
+    const selectedItem = document.querySelector(
+      `.${myDrop.classList[1]} .selected-item`
+    );
+    const menuItems = document.querySelectorAll(
+      `.${myDrop.classList[1]} .menu-items li`
+    );
+    myDrop.addEventListener("click", () => {
+      console.log("fdmfdl");
+      myDrop.classList.toggle("active");
+    });
+    menuItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        selectedItem.innerHTML = item.innerHTML;
+      });
+    });
+  });
 }
 // popupsClose.forEach((closeBtn)=> {
 

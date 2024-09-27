@@ -482,6 +482,7 @@ header.title p {
 .top-nav ul li {
   gap: 5px;
   line-height: 14.52px;
+  cursor: pointer;
 }
 .top-nav ul li span {
   font-size: var(--secondary-font-size);
@@ -514,7 +515,7 @@ header.title p {
   position: absolute;
   background-color: #fff;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
-  top: 29px;
+  top: 107%;
   width: 95%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -531,7 +532,10 @@ header.title p {
   font-size: var(--secondary-font-size);
   font-weight: var(--main-font-weight);
 }
-.my-drop:hover .menu-items {
+/* .my-drop:hover .menu-items {
+  display: block;
+} */
+.my-drop.active .menu-items {
   display: block;
 }
 .my-drop .menu-items li {
@@ -542,6 +546,9 @@ header.title p {
   -ms-transition: var(--main-transition-duration);
   -o-transition: var(--main-transition-duration);
   transition: var(--main-transition-duration);
+}
+.my-drop.products-links .selected svg {
+  right: 12px;
 }
 .top-nav .my-drop.links {
   display: none;
@@ -576,6 +583,9 @@ header.title p {
 }
 .main-nav .nav {
   gap: 32px;
+}
+.main-nav .logo img {
+  cursor: pointer;
 }
 .main-nav .nav li {
   font-size: 14px;
@@ -1004,6 +1014,11 @@ header.title p {
 @media (max-width: 580px) {
   #main-slider .owl-dots {
     width: 160px;
+    height: 34px;
+  }
+  #main-slider .owl-dots .owl-dot {
+    width: 38px;
+    height: 6px;
   }
 }
 @media (max-width: 500px) {
@@ -2121,7 +2136,7 @@ footer .footer-drop .menu-items {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  display: none !important;
+  /* display: none !important; */
   z-index: 1;
   overflow: hidden;
 }
@@ -2129,9 +2144,9 @@ footer .footer-drop .menu-items li {
   color: #000;
 }
 
-footer .footer-drop:hover .menu-items {
+/* footer .footer-drop:hover .menu-items {
   display: block !important;
-}
+} */
 footer .arrows {
   gap: 8px;
 }
@@ -2871,9 +2886,15 @@ footer .click-to-top:hover {
 }
 .payment-page.small .nav-tabs .nav-item {
   cursor: pointer;
+  height: 100%;
 }
 .payment-page.small .nav-tabs .nav-link {
   color: #21212199 !important;
+  padding: 4px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .payment-page.small .nav-tabs .nav-item.active .nav-link {
   color: var(--blue-color) !important;
