@@ -10167,6 +10167,11 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 8px;
   top: 110%;
 }
+.my-select.select-country-number .selected > span,
+.my-select.select-country .selected > span {
+  display: flex;
+  gap: 2px;
+}
 /* Width of the scrollbar */
 .number-container .my-select ul::-webkit-scrollbar {
   width: 4px;
