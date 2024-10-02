@@ -100,6 +100,9 @@ header.title {
   text-align: center;
   margin: 64px 0;
 }
+header.title .title-content {
+  width: 80%;
+}
 header.title h1 {
   font-family: Satoshi;
   font-size: 40px;
@@ -1562,6 +1565,10 @@ header.title p {
   background-color: #fff;
   margin-top: 20px;
 }
+.accordion-body .still-need-btn span,
+.accordion-body .still-need-btn button {
+  white-space: nowrap;
+}
 .accordion-body .helpful {
   margin-top: 16px;
   justify-content: space-between;
@@ -1573,7 +1580,7 @@ header.title p {
   width: fit-content;
   cursor: pointer;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .accordion-body .answer p,
   .accordion-body .still-need-btn span {
     font-size: var(--secondary-font-size);
@@ -1585,6 +1592,71 @@ header.title p {
   }
   .accordion-body .answer .still-need-btn {
     max-width: 163px;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  .home-page .accordion {
+    display: flex;
+    gap: 16px;
+  }
+  .home-page .accordion .div {
+    flex: 1;
+  }
+  .home-page .accordion-header .helpful span:first-child {
+    display: none;
+  }
+  .home-page .accordion-header .helpful span:last-child {
+    font-family: Inter;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 12.8px;
+    text-align: left;
+  }
+  .home-page .accordion-header .helpful span:last-child svg {
+    width: 12px;
+    height: 12px;
+  }
+  .home-page .accordion-header h6 {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 13px;
+  }
+  .home-page .accordion-button::after {
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+  }
+  .home-page .accordion-body .still-need-btn {
+    width: 350px !important;
+    height: fit-content;
+    margin-left: 10px;
+  }
+  .home-page .accordion-body p,
+  .home-page .accordion-body .still-need-btn span,
+  .home-page .accordion-body .still-need-btn button,
+  .home-page .accordion-body .helpful span {
+    font-size: 10px !important;
+    line-height: 15px;
+  }
+  .home-page .accordion-body .still-need-btn button {
+    font-size: 8px !important;
+    line-height: 12.8px;
+    margin-top: 4px;
+  }
+  .home-page .accordion-body .add-like {
+    font-family: Inter;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+  .home-page .accordion-body .add-like svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .accordion .accordion-body .helpful .hidden {
+    display: none;
   }
 }
 @media (max-width: 768px) {
@@ -1606,11 +1678,6 @@ header.title p {
   }
   .accordion-body .helpful span:last-child {
     font-size: 14px;
-  }
-}
-@media (min-width: 768px) {
-  .accordion .accordion-body .helpful .hidden {
-    display: none;
   }
 }
 /* End questions section */
@@ -2004,6 +2071,9 @@ footer .all-links-small ul li:hover {
     font-size: var(--secondary-font-size);
     line-height: 12px;
   }
+  footer .content .contact .contact-methods > div:not(:first-child) {
+    padding: 10px 12px !important;
+  }
   footer .content .contact .contact-methods .whatsapp .warning {
     font-size: 11px;
   }
@@ -2014,13 +2084,12 @@ footer .all-links-small ul li:hover {
     padding-left: 10px;
   }
 }
-
-@media (max-width: 991px) {
-}
-
 @media (max-width: 768px) {
   footer {
     padding: 40px 24px 33px 24px;
+  }
+  footer .content .logo img {
+    margin-bottom: 32px;
   }
   footer .content {
     flex-direction: column;
@@ -2030,11 +2099,9 @@ footer .all-links-small ul li:hover {
   }
   footer .content .contact .contact-methods {
     width: 100% !important;
-    /* flex-direction: column; */
   }
-  footer .content .contact .contact-methods > div {
-    width: 100% !important;
-    /* flex-direction: column; */
+  footer .content .contact .contact-methods > div:not(:first-child) {
+    padding: 12px !important;
   }
   footer .content .all-links {
     display: none;
@@ -2049,7 +2116,16 @@ footer .all-links-small ul li:hover {
     display: none;
   }
 }
-
+@media (min-width: 576px) and (max-width: 992px) {
+  footer .content .contact .contact-methods {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+  }
+  footer .content .contact .contact-methods > div {
+    width: 45%;
+  }
+}
 /* End Conternt */
 /* Start Payment */
 footer .payment .supported-by {
@@ -2164,14 +2240,26 @@ footer .click-to-top {
 footer .click-to-top:hover {
   background-color: var(--blue-color);
 }
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   footer .end-footer {
     flex-direction: column;
     gap: 32px;
+    align-items: flex-start !important;
+  }
+  footer .end-footer .copyrights {
+    margin-top: 32px;
   }
   footer .end-footer > div {
     width: 100%;
     justify-content: space-between;
+  }
+  footer .end-footer .socials {
+    width: 60%;
+  }
+}
+@media (max-width: 576px) {
+  footer .end-footer .socials {
+    width: 100%;
   }
 }
 /* Mini footer */
@@ -2261,7 +2349,7 @@ footer .click-to-top:hover {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  border: 1.04px solid var(--main-color) 40;
+  border: 1.04px solid #1f273240;
   background-color: transparent;
   line-height: 25px;
   -webkit-transition: var(--main-transition-duration);
@@ -2406,10 +2494,10 @@ footer .click-to-top:hover {
 .products-page .choose-drops .platforms-drop ul,
 .products-page .choose-drops .services-drop ul {
   position: absolute;
-  width: 94%;
+  width: 100%;
   padding: 0;
-  bottom: -133px;
-  left: 8px;
+  bottom: -125px;
+  left: 0px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -2455,7 +2543,7 @@ footer .click-to-top:hover {
   }
   .products-page .choose-drops .platforms-drop ul,
   .products-page .choose-drops .services-drop ul {
-    bottom: -120px;
+    bottom: -108px;
   }
   .products-page .view-all-btn {
     display: none;
@@ -3907,7 +3995,7 @@ footer .click-to-top:hover {
 }
 .blog-page .blogs {
   display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
   gap: 54px;
 }
 .blog-page .blogs {
@@ -5153,15 +5241,11 @@ header.page-header .desc {
 }
 .platform-updates-page .small-browse-categories {
   width: 100%;
-  -webkit-border-radius: 56px;
-  -moz-border-radius: 56px;
-  -ms-border-radius: 56px;
-  -o-border-radius: 56px;
-  border-radius: 56px;
   overflow: hidden;
   display: none;
+  overflow: hidden;
 }
-.platform-updates-page .small-browse-categories::before {
+/* .platform-updates-page .small-browse-categories::before {
   content: "\f078";
   position: absolute;
   font-family: "font awesome 6 free";
@@ -5170,8 +5254,8 @@ header.page-header .desc {
   font-weight: 900;
   font-size: 14px;
   color: #000;
-}
-.platform-updates-page select {
+} */
+/* .platform-updates-page select {
   width: 100%;
   appearance: none;
   outline: none;
@@ -5187,6 +5271,21 @@ header.page-header .desc {
 .platform-updates-page select:focus {
   outline: none;
   border: none;
+} */
+.platform-updates-page .my-select {
+  width: 100%;
+  -webkit-border-radius: 56px;
+  -moz-border-radius: 56px;
+  -ms-border-radius: 56px;
+  -o-border-radius: 56px;
+  border-radius: 56px;
+  padding: 16px;
+  font-weight: 500;
+  color: #828282;
+  font-size: 14px;
+}
+.platform-updates-page .my-select .fa-chevron-down {
+  color: #000;
 }
 .platform-updates-page .my-pagination {
   margin-top: 32px;
@@ -11214,7 +11313,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 .faq-popup .popup-header .contact-us-methods a {
   gap: 8px;
-  border: 0.5px solid var(--paragraf-color) 33;
+  border: 0.5px solid #66708533;
   padding: 6px 12px 6px 6px;
   background-color: var(--white-color);
   -webkit-border-radius: 100px;
@@ -11273,3 +11372,19 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 }
 /* End Payment State pages */
+footer .second-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 1200px) {
+  footer .second-content {
+    flex-direction: column-reverse;
+    flex: 1;
+  }
+  footer .second-content .all-links {
+    width: 100%;
+  }
+  footer .second-content .contact {
+    width: 50%;
+  }
+}

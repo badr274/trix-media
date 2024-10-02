@@ -11,9 +11,11 @@ window.onresize = () => {
 const containers = document.querySelectorAll(".container");
 if (windowWidth <= 992) {
   containers.forEach((container) => {
+    // if (!container.classList.contains("accordion-container")) {
     container.classList.add("container-fluid");
     const containerFluid = document.querySelector(".container-fluid.container");
     containerFluid.classList.remove("container");
+    // }
   });
 } else if (windowWidth > 992) {
   const containersFluid = document.querySelectorAll(".container-fluid");
