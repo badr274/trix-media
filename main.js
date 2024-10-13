@@ -36,11 +36,14 @@ const popups = document.querySelectorAll(".popup");
 const popupsClose = document.querySelectorAll(".popup .popup-close");
 const overlay = document.querySelector(".overlay");
 const myDrops = document.querySelectorAll(".my-drop");
-const myDropList = document.querySelector(".my-drop .menu-items");
+
 if (myDrops) {
   myDrops.forEach((myDrop) => {
     const theDrop = document.querySelector(`.${myDrop.classList[1]}`);
     const theDropSelected = document.querySelector(`.${myDrop.classList[1]}`);
+    const myDropList = document.querySelector(
+      `.${myDrop.classList[1]} .menu-items`
+    );
     const selectedItem = document.querySelector(
       `.${myDrop.classList[1]} .selected-item`
     );
@@ -48,12 +51,14 @@ if (myDrops) {
       `.${myDrop.classList[1]} .menu-items li`
     );
     myDrop.addEventListener("click", () => {
-      console.log("fdmfdl");
       myDrop.classList.toggle("active");
     });
     menuItems.forEach((item) => {
       item.addEventListener("click", () => {
+        // if (!myDropList.classList.contains("langs")) {
+        // console.log("object");
         selectedItem.innerHTML = item.innerHTML;
+        // }
       });
     });
   });
