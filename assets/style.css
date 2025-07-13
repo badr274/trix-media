@@ -487,9 +487,10 @@ header.title p {
   line-height: 14.52px;
   cursor: pointer;
 }
-.top-nav ul li span {
+.top-nav ul li a {
   font-size: var(--secondary-font-size);
   font-weight: var(--main-font-weight);
+  color: black;
 }
 /* dorpdown styling */
 .my-drop {
@@ -594,6 +595,9 @@ header.title p {
   font-size: 14px;
   font-weight: var(--main-font-weight);
   cursor: pointer;
+}
+.main-nav .nav li a {
+  color: white;
 }
 .sign-up-btn,
 .login-btn {
